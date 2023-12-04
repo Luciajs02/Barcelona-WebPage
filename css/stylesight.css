@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: white;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.20);
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo {
+    text-transform: uppercase;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 800;
+    line-height: 1em;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.navigation ul {
+    list-style: none;
+}
+
+.header .navigation ul li {
+    float: left;
+    position: relative;
+}
+
+.header .navigation ul li a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    transition: all .2s ease;
+}
+
+.header .navigation ul li a:hover {
+    background-color: rgb(233, 76, 76);
+}
+
+.header .navigation ul li ul {
+    position: absolute;
+    right: 0;
+    width: 300px;
+    background-color: rgb(255, 255, 255, 0.20);
+    display: none;
+}
+
+.header .navigation ul li ul a {
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.header .navigation ul li ul li ul {
+    position: absolute;
+    top: 0;
+    right: 300px;
+}
+
+.header .navigation ul li ul li {
+    width: 100%;
+}
+
+.header .navigation ul li:hover > ul {
+    display: initial;
+}
+
+.header .navigation ul li ul li span {
+    float: right;
+    color: white;
+    background-color: rgb(233, 76, 76);
+    padding: 5px 10px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#toggle,
+.header label {
+    display: none;
+    cursor: pointer;
+}
+
+img {
+    width: 45px;
+    height: 35px;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/sights.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+}
+
+.background-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.location {
+    text-align: center;
+    opacity: 0; 
+    animation: fadeInLocation 5s forwards;
+}
+
+@keyframes fadeInLocation {
+    0% {
+        opacity: 0; 
+        transform: translateY(20px); /
+    }
+    100% {
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.location h2 {
+    margin-bottom: 8px;
+    font-size: 6em;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    text-align: center; 
+    font-size: 15px;
+    padding: 18px 0; 
+    z-index: 999; 
+    color: white;
+}
+
+.scroll-content {
+    padding: 20px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.scrolled {
+    background-color: rgb(40, 40, 40);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.header .navigation ul li ul.scrolled-background {
+    background-color: rgb(40, 40, 40);
+}
+
+.text {
+    flex-basis: 75%;
+    margin-bottom: 20px;
+    line-height: 2;
+    color: hsl(225, 8%, 42%);
+}
+
+.container { 
+    padding-inline: 60px; 
+}
+
+.section-title { 
+    margin-bottom: 15px;
+    text-align: center ;
+    text-transform: uppercase;
+}
+
+.section-text {
+    color: hsl(225, 8%, 42%);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.card-text {
+    color: hsl(225, 8%, 42%);
+    font-size: 14px;
+}
+
+.popular { 
+    padding-block: 50px;
+}
+
+.popular-list,
+.popular-list > li:not(:last-child) { 
+    margin-bottom: 30px; 
+}
+
+.popular-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.popular-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    height: 420px;
+    width: 390px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.popular-card .card-img { 
+    height: 100%; 
+}
+  
+.popular-card .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popular-card .card-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: white;
+    border-radius: 25px;
+    padding: 20px;
+}
+  
+.popular-card .card-subtitle {
+    color: hsl(197, 100%, 36%);
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+  
+.popular-card .card-title { 
+      margin-bottom: 5px; 
+      text-decoration: none;
+      font-size: 15px;
+}
+
+.popular-card :is(.card-subtitle, .card-title) > a { color: inherit; }
+
+.h3 {
+    font-size: calc(16px + 0.45vw);
+    font-weight: 700;
+}
+
+.h2, .h3 {
+    color: hsl(206, 34%, 20%);
+    text-transform: uppercase;
+}
+
+li {
+    list-style: none;
+}
+
+#see-more-btn {
+    color: white;
+    background-color: rgb(233, 76, 76);
+    border: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 100px;
+    padding: 8px;
+    width: 20%;
+    height: 50px;
+    cursor: pointer;
+}
+
+#see-less-btn {
+    color: white;
+    background-color: rgb(233, 76, 76);
+    border: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 100px;
+    padding: 8px;
+    width: 20%;
+    height: 50px;
+    cursor: pointer;
+    align-items: center;
+    margin-left: 40%;
+}
+
+#see-more-btn-nature {
+    color: white;
+    background-color: rgb(233, 76, 76);
+    border: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 100px;
+    padding: 8px;
+    width: 20%;
+    height: 50px;
+    cursor: pointer;
+}
+
+#see-less-btn-nature {
+    color: white;
+    background-color: rgb(233, 76, 76);
+    border: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 100px;
+    padding: 8px;
+    width: 20%;
+    height: 50px;
+    cursor: pointer;
+    align-items: center;
+    margin-left: 40%;
+}
+
+#see-more-btn-atr {
+    color: white;
+    background-color: rgb(233, 76, 76);
+    border: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 100px;
+    padding: 8px;
+    width: 20%;
+    height: 50px;
+    cursor: pointer;
+}
+
+#see-less-btn-atr {
+    color: white;
+    background-color: rgb(233, 76, 76);
+    border: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 100px;
+    padding: 8px;
+    width: 20%;
+    height: 50px;
+    cursor: pointer;
+    margin-left: 40%;
+}
+
+
+
+@media (max-width: 991px) {
+    .header {
+      padding: 0 5%;
+    }
+  
+    .logo {
+      font-size: 1.2em;
+    }
+  
+    .header .navigation ul li ul {
+        width: 150px;
+
+    }
+
+    .header .navigation ul li a {
+      font-size: 13px;
+      padding: 15px;
+    }
+
+    .header .navigation ul li ul li a {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .location h2 {
+        margin-bottom: 8px;
+        font-size: 3em;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+  
+    .scroll-content {
+      padding: 15px;
+    }
+  
+    .text {
+      flex-basis: 100%;
+      font-size: 15px;
+      line-height: 1.8; 
+    }
+
+    .footer {
+        font-size: 10px;
+    }
+
+    .popular-list,
+    .popular-list > li:not(:last-child) {
+        margin-bottom: 20px; 
+    }
+
+    .popular-list {
+        grid-template-columns: 1fr; 
+        margin-left: 15%; 
+    }
+
+    .popular-card {
+        height: auto;
+        width: 100%;
+        opacity: 1;
+        transform: none;
+        margin-bottom: 20px;
+    }
+
+    .popular-card .card-img {
+        height: auto;
+    }
+
+    .popular-card .card-content {
+        position: static;
+        background: none;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .popular-card .card-subtitle {
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+
+    .popular-card .card-title {
+        font-size: 14px;
+    }
+}
+
+
+
+
