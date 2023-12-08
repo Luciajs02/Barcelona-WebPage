@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Barcelona</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="../index.html" class="logo">Travel</a>
+        <input type="checkbox" id="toggle">
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">History</a>
+                    <ul>
+                        <li><a href="../html/culture.html">Culture and Traditions</a></li>
+                        <li><a href="../html/people.html">Popular People Born</a></li>
+                    </ul>
+                </li>
+                <li><a href="../html/calendar.html">Calendar</a></li>
+                <li><a href="../html/sightseeing.html">Sightseeings</a></li>
+                <li><a href="#">Services</a>
+                    <ul>
+                        <li><a href="../html/accommodation.html">Accommodation</a></li>
+                        <li><a href="../html/restaurants.html">Restaurants</a></li>
+                    </ul>
+                </li>
+                <li><a href="../html/contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="background-image">
+            <div class="location">
+                <h2>Barcelona</h2>
+                <p>Catalonia-Spain</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-content">
+        <div class="text">
+            <p style="font-weight: bold;">Barcelona is a city full of original leisure options that encourage you to visit it again and again. Open to the Mediterranean Sea and famous for Gaudí and his modernist architecture, Barcelona is revealed as one of the trendiest European capitals.</p><br>
+            <p>The city is a focus of new trends in the world of culture, fashion and gastronomy. It combines the creativity of its artists and designers with respect and care for traditional traditional establishments. In it, the charm and tranquility of its historic center, the avant-garde of its most modern neighborhoods and the urban rhythm of one of the most visited cities in the world coexist.</p><br>
+            <button id="read-more-btn">Read more</button>
+            <div class="additional-content" style="display: none;">
+                <h2>City to visit again</h2>
+                <p>Barcelona attracts with its essential monuments such as the Sagrada Familia, Park Güell, Casa Batlló, or La Pedrera. But those who visit it discover a city that always has pleasant surprises for each trip. Walks by the sea, nights on the rooftops with views of the city skyline, the Olympic Barcelona, or everything that surrounds FC Barcelona are possibilities to live new experiences on each visit. The gastronomic offer is also very varied and combines haute cuisine restaurants recognized worldwide, traditional Catalan food houses, gastronomic markets, places to explore the world through flavors... For its part, the cultural agenda includes important art centers, such as the Museu Picasso, the National Museum of Art of Catalonia, or CaixaForum, a wide range of festivals and one of the great temples of opera in Spain, the Gran Teatre del Liceu.</p><br>
+            </div>
+            <button id="close-btn" style="display: none;">Close</button>
+        </div>
+    
+        <section class="useful-links">
+            <button id="botonlinks">Useful Links</button>
+            <ul id="links-list" class="hidden">
+                <li><a href="https://ajuntament.barcelona.cat/apps/es">Destination Apps</a></li>
+                <li><a href="https://www.tmb.cat/es/barcelona/metro/lineas">Metro</a></li>
+                <li><a href="https://www.tmb.cat/es/barcelona/autobuses/lineas">Urban Bus Network</a></li>
+            </ul>
+        </section>
+
+        <h2 class="titulo-destacado">Excursions to nearby destinations</h2>
+
+        <div class="slider">
+            <div class="list">
+                <div class="item">
+                    <img src="../assets/costaBrava.jpg" alt="">
+                    <div class="text-overlay">
+                        <h3>Costa Brava</h3>
+                        <p>Distance from Barcelona 150Km</p><br>
+                        <p style="font-weight: bold;">Coves with intense blue waters, golden sand beaches, natural parks...</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../assets/costadorada.jpg" alt="">
+                    <div class="text-overlay">
+                        <h3>Costa daurada</h3>
+                        <p>Distance from Barcelona 150Km</p><br>
+                        <p style="font-weight: bold;">The Mediterranean that bathes the province of Tarragona, south of Catalonia</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../assets/sitges.jpg" alt="">
+                    <div class="text-overlay">
+                        <h3>Sitges</h3>
+                        <p>Distance from Barcelona 40km</p><br>
+                        <p style="font-weight: bold;">The location, between the sea and the mountains, of the Barcelona town of Sitges</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../assets/tarragona.jpg" alt="">
+                    <div class="text-overlay">
+                        <h3>Tarragona</h3>
+                        <p>Distance from Barcelona 100Km</p><br>
+                        <p style="font-weight: bold;">In Tarragona, history comes out of the books and is lived at every step</p>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="prev"></button>
+                <button id="next">></button>
+            </div>
+            <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>        
+    </div>
+
+    <footer class="footer" id="footer">
+        <p>© 2023 Travel Company. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+
+
+
+</html>
